@@ -3,26 +3,19 @@ import java.util.Scanner;
 public class HelloGithub {
 
     public static void main(String[] args) {
-        double studentGPA;
-        double freshmen, sophomore, junior, senior;
-        String studentName;
-        System.out.println("What is your name?");
+        String hardestLanguage = "React";
+        String theUsersGuess;
+        System.out.println("Which is the hardest language to learn: Java or React?");
 
         Scanner input = new Scanner(System.in);
-        studentName = input.next();
+        theUsersGuess = input.next();
 
-        System.out.println("Hey, " + studentName + "!");
-        System.out.println("What was your GPA Freshmen year?");
-        freshmen = input.nextDouble();
-        System.out.println("How about sophomore year?");
-        sophomore = input.nextDouble();
-        System.out.println("Junior?");
-        junior = input.nextDouble();
-        System.out.println("What about senior year?");
-        senior = input.nextDouble();
-
-        studentGPA = ((freshmen + sophomore + junior + senior)/4);
-        System.out.println("Your GPA is " + studentGPA);
+        if(theUsersGuess.toLowerCase().equals(hardestLanguage.toLowerCase())) {
+            System.out.println("Correct! React is the hardest language.");
+        } else {
+            System.out.println("Wrong. You must have never tried React.JS...");
+            System.out.println("You guessed " + theUsersGuess + ", but the right answer is " + hardestLanguage);
+        }
     }
 
 }
